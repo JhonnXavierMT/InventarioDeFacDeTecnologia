@@ -1,5 +1,5 @@
 from colorama import Fore
-import os ,random , EquiposDeLaboratorio, Inventario,exportar
+import os , EquiposDeLaboratorio, Inventario,exportar
 from Inventario import matriz
 from EquiposDeLaboratorio import Equipos
 from datetime import datetime
@@ -20,13 +20,15 @@ def menu():
     print("\t8 -🔎 Buscar por equipo ")
     print("\t9 -✍🏻 Editar equipo del inventario")
     print("\t10 -🗑️  Eliminar equipo del inventario")
-    print(Fore.YELLOW+"\tS -💾 Salir del programa y Guardar inventario")
+    print(Fore.YELLOW+"\tS -🛠️ ver inventario malos ")
+    print(Fore.YELLOW+"\tS -💾 Salir del programa y Guardar inventario actual")
     print(" --------------------------------")
 
 #main
 tamaño=0
 while True:
     menu()
+    Hora=datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     try:
         print(" ---------------------------------------")
         OpcionMenu=input(Fore.BLUE+"Selecciona una opcion >>> ")
@@ -99,11 +101,21 @@ while True:
             print("")
             print("Has seleccionado la opcion 5")
             matriz=Inventario.eliminar(matriz)
-            Inventario.mostrarmatriz(matriz)
+            input("Pulsa una tecla para continuar")
+        elif OpcionMenu=="11":
+            print("")
+            print("Has seleccionado la opcion 11")
+            matrizMala=Inventario.Equiposmalos(matriz)
+            Inventario.mostrarmatriz(matrizMala)
+            imprimir= input("deseas guardar la matriz? (S/N) >>> ")
+            if imprimir.upper()== "S":
+                exportar.guardar_matriz_txt(f"{Hora}_EquiposMalos.txt",matrizMala)
+                print(Fore.GREEN+"✅ Matriz de equipos malos guardada correctamente")
+            else:
+                print(Fore.YELLOW+"⚠️ No se guardo la matriz de equipos malos")
             input("Pulsa una tecla para continuar")
             
         elif OpcionMenu=="S":
-            Hora=datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
             exportar.guardar_matriz_txt(f"{Hora}_inventario_guardado.txt", matriz)
             print(Fore.CYAN + "👋 ¡Hasta luego!")
             break

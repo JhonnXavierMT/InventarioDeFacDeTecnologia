@@ -27,6 +27,7 @@ def nuevoEquipo(list):
     else:
         print("El equipo ya existe en la lista, NO se agrego.⚠️")
         return list
+    
 def mostrarEquipo(Equipos):
     for dato in Equipos:
         print(dato,end="")

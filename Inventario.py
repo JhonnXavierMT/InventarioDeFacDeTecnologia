@@ -19,19 +19,12 @@ matriz = [
     ["Cod-15", "NOMBRE", "ANALIZADOR LÓGICO",     "ESTADO", "Dañado    ❌", "DETALLE", "Conectores rotos"]
 ]
 
-
-def generar_codigo(i):
-    codigo = i+"-"
-    for i in range(5):
-        codigo += str(random.randint(0, 9))
-    return codigo
-
 def cargar_datos(long,matrix):
     for i in range(long):
         list=[]
         for j in range(7):
             if j==0:
-                codigo="Cod-"+str(i)
+                codigo="Cod-"+str(i+random.randint(16, 100))
                 list.append(codigo)
             elif j==1:
                 list.append("NOMBRE")
@@ -84,8 +77,6 @@ def cargar_datos(long,matrix):
         matrix.append(list)
         print("\t[Equipo agregado ✔️ ]")
     return matrix
-
-#----------------------------------------------------------------------------------
 
 def mostrarmatriz(matriz):
     print("Los datos del almacen son: ")
@@ -216,3 +207,11 @@ def eliminar(matriz):
         print("ELIMINACION CANCELADA. ✔️")
         return matriz
   
+def Equiposmalos(matriz):
+    equipomalo=[]
+    print("los equipos dañados son:")
+    for fila in matriz:
+        for columna in fila:
+            if "Dañado    ❌" in columna:
+                equipomalo.append(fila)
+    return equipomalo
