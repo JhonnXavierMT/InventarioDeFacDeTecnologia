@@ -1,6 +1,6 @@
 # 📌 Mini Proyectos JavaScript
 
-![Captura del Menu]()
+![Captura del Menu](./img/menu.jpg)
 
 ## Descripción
 
