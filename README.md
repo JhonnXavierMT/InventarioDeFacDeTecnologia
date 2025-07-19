@@ -1,4 +1,4 @@
-# 📌 Mini Proyectos Inventario de Equipos de Telecomunicaciones y Electronica
+# 📌 Mini Proyecto Inventario de Equipos de Telecomunicaciones y Electronica
 
 ![Captura del Menu](./img/menu.jpg)
 
