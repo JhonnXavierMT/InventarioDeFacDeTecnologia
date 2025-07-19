@@ -20,8 +20,8 @@ def nuevoEquipo(list):
     print("--------------------------")
     nombre=input("📋 ingrese el nuevo equipo que quiere >>> ")
     print("--------------------------")
-    if 0==list.count(nombre):
-        list.append(nombre)
+    if 0==list.count(nombre) and nombre != "":
+        list.append(nombre.upper())
         print("El equipo fue gregado. ✔️")
         return list
     else:
@@ -36,7 +36,7 @@ def mostrarEquipo(Equipos):
 def buscarEquipo(dato,Equipos):
     b=False
     for element in Equipos:
-        if dato == element:
+        if  dato.upper() == element:
             b=True
             break
     if b:

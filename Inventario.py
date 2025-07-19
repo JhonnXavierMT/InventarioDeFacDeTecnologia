@@ -44,7 +44,7 @@ def cargar_datos(long,matrix):
                     else:
                         print("El Equipo no esta en la lista, intente de nuevo.")
                 nombre=Equipos[nombre-1]
-                list.append(nombre)
+                list.append(nombre.upper())
             elif j==3:
                 list.append("ESTADO")
             elif j==4:

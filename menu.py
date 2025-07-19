@@ -20,7 +20,7 @@ def menu():
     print("\t8 -🔎 Buscar por equipo ")
     print("\t9 -✍🏻 Editar equipo del inventario")
     print("\t10 -🗑️  Eliminar equipo del inventario")
-    print(Fore.YELLOW+"\tS -🛠️ ver inventario malos ")
+    print(Fore.YELLOW+"\t11-🛠️ ver inventario malos ")
     print(Fore.YELLOW+"\tS -💾 Salir del programa y Guardar inventario actual")
     print(" --------------------------------")
 

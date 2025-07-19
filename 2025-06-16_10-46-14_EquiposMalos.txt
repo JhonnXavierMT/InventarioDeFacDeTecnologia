@@ -1,0 +1,9 @@
+Cod-2,NOMBRE,FUENTE DC,ESTADO,Dañado    ❌,DETALLE,No prende
+Cod-3,NOMBRE,FUENTE DC,ESTADO,Dañado    ❌,DETALLE,Corto Circuito
+Cod-5,NOMBRE,FUENTE DC,ESTADO,Dañado    ❌,DETALLE,Lectura inestable
+Cod-7,NOMBRE,IMPRESORA 3D,ESTADO,Dañado    ❌,DETALLE,Error de extrusión
+Cod-9,NOMBRE,PROYECTOR,ESTADO,Dañado    ❌,DETALLE,Lámpara quemada
+Cod-11,NOMBRE,OSCILOSCOPIO DIGITAL,ESTADO,Dañado    ❌,DETALLE,Pantalla no responde
+Cod-13,NOMBRE,GENERADOR DE SEÑALES,ESTADO,Dañado    ❌,DETALLE,Distorsión de señal
+Cod-15,NOMBRE,ANALIZADOR LÓGICO,ESTADO,Dañado    ❌,DETALLE,Conectores rotos
+Cod-32,NOMBRE,IMPRESORA 3D,ESTADO,Dañado    ❌,DETALLE,o pprende
